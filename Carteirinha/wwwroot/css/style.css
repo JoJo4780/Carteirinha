@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(#506ee5, #68b2f8, #a9a3f8);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+}
+footer {
+    color:#000000;
+    font-weight:bolder;
+}
+h2 {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: #7373f0;
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+}
+.titulo_form{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.carteirinha{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: 9px solid #5757e7;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #8866f1 5%, #a9a3f8 92%);
+}
+.carteirinha_form{
+    display: flex;
+}
+.box_image{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 15rem;
+    height: 15rem;
+    margin: 1.5rem 4rem 2.5rem 4rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 10px;
+}
+.mensagem_image{
+    margin: 0;
+    font-size: 1.3rem;
+    cursor:default;
+
+}
+.User_image{
+cursor:pointer;
+}
+.bi-arrow-up-circle{
+    border-radius: 50%;
+}
+.formularios{
+    width: 21rem;
+}
+.forms{
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+.nome_form{
+    display:inline;
+}
+.input_form{
+    font-size: 1.3rem;
+    border: 1px solid white;
+    background-color: white;
+    margin-left: 2px;
+}
+.input_form:focus{
+    font-size: 1.3rem;
+    border: 1px solid white;
+    background-color: white;
+    margin-left: 2px;
+    outline: 0;
+}
+.footer_container{
+    height: 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: #806ef3;
+}
+.botão-confirmar{
+    margin-top: 10px;
+    padding: 0.6rem;
+    font-size: 2.3rem;
+    border: 0;
+    font-family: 'Dancing Script', cursive;
+    background-color: #9283f1;
+    border-radius: 2rem;
+    outline: 0;
+}
+.botão-confirmar:hover{
+    background-color: #806ef3;
+}
+.Code{
+    text-align: center;
+    margin: 2px 0px 2px 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
