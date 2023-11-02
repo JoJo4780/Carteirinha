@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet">
-<div class="principal">
+<div class="principal ">
     <h1 class="text-center">Crie sua carteirinha</h1>
     <div class="container">
         <div class="carteirinha">
@@ -14,10 +14,10 @@
             </div>
             <form class="carteirinha_form">
                 <div class="box_image">
-                    <label for="User_image">
+                    <label id="icon" for="User_image">
                         <i class="bi bi-arrow-up-circle User_image"></i>
                     </label>
-                    <input type="file" class="Image_file" id="User_image" function="adicionar_imagem()" hidden>
+                    <input type="file" class="Image_file" id="User_image" onchange="readImage()" hidden>
                     <p class="mensagem_image">Adicione uma foto</p>
                 </div>
                 <div class="nome formularios">
@@ -25,7 +25,7 @@
                         <p class="nome_form">Nome:</p><input type="text" class="input_form" autocomplete="off">
                     </div>
                     <div class="forms">
-                        <p class="nome_form">Idade:</p><input type="text" class="input_form" autocomplete="off">
+                        <p class="nome_form">Idade:</p><input type="date" class="input_form" autocomplete="off">
                     </div>
                     <div class="forms">
                         <p class="nome_form">Idolo:</p><input type="text" class="input_form" autocomplete="off">
