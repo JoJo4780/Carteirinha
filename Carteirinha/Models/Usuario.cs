@@ -19,7 +19,9 @@ namespace  Carteirinha.Models
         [Required(ErrorMessage = "Digite a senha, ela deve possuir mais de 8 digitos")]
         [MinLength(8, ErrorMessage = "Digite a senha, ela deve possuir mais de 8 digitos")]
         public string Senha { get; set; }
-        public int Login { get; set; } = 0;
-
+        public string Login { get; set; } = "0";
+        public string Status { get; set; } = "Ainda não solicitado";
+             
+        }
     }
-}
+

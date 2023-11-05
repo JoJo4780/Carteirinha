@@ -1,18 +1,35 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-function readImage() {
-    if (this.files && this.files[0]) {
-        var file = new FileReader();
-        file.onload = function (e) {
-            refazerbox()
-            document.getElementById("preview").src = e.target.result;
+﻿document.getElementById('User_image').addEventListener('change', function (event) {
+    const imagePreview = document.getElementById('preview_Image');
+    var input_image = document.getElementById('Url_image');
+    const file = event.target.files[0];
+    var image_hide = document.querySelectorAll(".image")
+    console.log(image_hide)
+    image_hide.forEach(function (e) {
+        e.style.display = "none"
+    })
+    if (file) {
+        // Leitura do arquivo e exibição da imagem
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            input_image.value = e.target.result;
+            imagePreview.style.display = 'block';
         };
-        file.readAsDataURL(this.files[0]);
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.style.display = 'none';
+        imagePreview.src = '#';
     }
-}
-function refazerbox() {
-    var box = document.getElementById("icon")
-    box.classList.add("hide")
-}
+});
+import { Tabulator } from 'https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator_esm.min.js';
+var table = new Tabulator("#example-table", {
+    height: "311px",
+    columns: [
+        { title: "Name", field: "name" },
+        { title: "Progress", field: "progress", sorter: "number" },
+        { title: "Gender", field: "gender" },
+        { title: "Rating", field: "rating" },
+        { title: "Favourite Color", field: "col" },
+        { title: "Date Of Birth", field: "dob", hozAlign: "center" },
+    ],
+});

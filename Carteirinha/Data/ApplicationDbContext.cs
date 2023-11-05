@@ -10,5 +10,6 @@ namespace Carteirinha.Data
         {
         }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Carteirinhas> Carteirinhas { get; set; }
     }
 }

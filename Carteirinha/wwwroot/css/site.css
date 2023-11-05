@@ -1,26 +1,37 @@
-html {
+.html_main {
     font-size: 18px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 20px;
-    }
-}
-
-html {
     position: relative;
     min-height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Dancing Script', cursive;
 }
-.footer_container {
-    position:absolute;
-    width:100%;
-    bottom: 0;
-    left: 0;
-    height: 3.5rem;
-    border-radius: 0 0 0.5rem 0.5rem;
+.tabela-adm{
+    font-family:Arial;
+}
+    main {
+        flex: 1;
+    }
+
+    footer {
+        flex-shrink: 0;
+        border-top: 1px solid #ccc; /* Borda superior do footer, ajuste conforme necessário */
+        text-align: center; /* Alinhamento do texto no centro */
+    }
+
+@media only screen and (max-width: 600px) {
+    html {
+        height: 130%;
+        overflow: scroll;
+    }
+    body {
+        width: fit-content;
+    }
+}
+.function{
+margin: 0.2rem;
 }

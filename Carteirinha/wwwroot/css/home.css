@@ -1,16 +1,26 @@
-﻿.img-carrousel{
-    width:100%;
-    height:35%;
-}
-.carrosel_config {
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    width: 60%;
-    height: 30%;
+﻿.cabecalho {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 .caixa {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    background-color: gray;
+    height: 30vw;
+    width: 40vw;
 }
+.Biografia {
+    text-align: center;
+    font-family: sans-serif;
+    height: 70vh;
+    margin: 1rem;
+}
+.Biografia p {
+        text-align: justify;
+        justify-content: center;
+        display: flex;
+        height: 80%;
+        margin: 0% 10%;
+        overflow-y: scroll;
+    }

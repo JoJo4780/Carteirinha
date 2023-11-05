@@ -1,23 +1,35 @@
-
+.html_carteirinha{
+    overflow-x:hidden;
+    overflow-y:auto;
+}
 body {
-    background: linear-gradient(#506ee5, #68b2f8, #a9a3f8);
     width: 100vw;
-    height: 100vh;
+    height: 90%;
     font-family: 'Dancing Script', cursive;
     box-sizing: border-box;
+    overflow:hidden;
 }
-body div.principal{
-    overflow-x:hidden;
-    overflow-y:scroll;
+.form_main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+.nav{
+    margin:0;
+}
+.bg-linear {
+    background: linear-gradient(#506ee5, #68b2f8, #a9a3f8);
+}
+body div.principal {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .hide{
     display:none;
 }
-footer {
-    color:#000000;
-    font-weight:bolder;
-}
-
 h2 {
     border-radius: 0.5rem 0.5rem 0 0;
     background-color: #7373f0;
@@ -29,45 +41,45 @@ h2 {
     width:100%;
     box-sizing: border-box;
 }
-.container{
+.container_1 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
 }
-.carteirinha{
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow:hidden;
-    grid-template-rows: 1fr;
+.carteirinha {
+    height: 75%;
+    width: 80%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     border: 9px solid #5757e7;
     box-sizing: border-box;
     border-radius: 1rem;
     background: linear-gradient(90deg, #8866f1 5%, #a9a3f8 92%);
 }
-.carteirinha_form{
+.carteirinha_form {
     display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
 }
-.box_image{
+.box_image {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    width: 15rem;
-    height: 15rem;
-    margin: 1.5rem 4rem 2.5rem 4rem;
+    width: 35%;
+    height: 70%;
+    margin: 1.5rem 2rem 1rem 2rem;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     background-color: white;
     border-radius: 10px;
-}
-#preview{
-    width:100%;
-    height:100%;
 }
 .mensagem_image {
     margin: 0;
@@ -80,8 +92,8 @@ cursor:pointer;
 .bi-arrow-up-circle{
     border-radius: 50%;
 }
-.formularios{
-    width: 21rem;
+.formularios {
+    width: 60%;
 }
 .forms{
     font-size: 1.7rem;
@@ -104,15 +116,11 @@ cursor:pointer;
     margin-left: 2px;
     outline: 0;
 }
-.footer_container{
-    height: 2rem;
-    border-radius: 0 0 0.5rem 0.5rem;
-    background-color: #806ef3;
-}
 .botão-confirmar{
     margin-top: 10px;
-    padding: 0.6rem;
-    font-size: 2.3rem;
+    margin-bottom:5px;
+    padding: 0.4rem;
+    font-size: 1.5rem;
     border: 0;
     font-family: 'Dancing Script', cursive;
     background-color: #9283f1;
@@ -127,4 +135,132 @@ cursor:pointer;
     margin: 2px 0px 2px 0px;
     font-size: 30px;
     font-weight: bold;
+}
+.tabela{
+    overflow:auto;
+}
+#preview_Image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius:7px;
+}
+.conteudo-curiosidade {
+    margin-right: 20%;
+}
+@media only screen and (max-width: 600px) {
+    .carteirinha_form {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        
+    }
+    .html_main{
+        overflow-y:scroll;
+    }
+    .carteirinha {
+        height: 75%;
+        max-width: 95%;
+        margin: 0;
+    }
+    .box_image {
+        height: 30%;
+        width: 50%;
+        margin: 0;
+    }
+    .forms {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+    .mensagem_image {
+        margin: 0;
+        font-size: 0.9rem;
+        cursor: default;
+    }
+    .container_1 {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        justify-content:normal;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .formularios {
+        align-items: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        max-width: 262px;
+    }
+    html{
+        height:150%
+    }
+    body {
+        width: 100vw;
+        height: 94%;
+        font-family: 'Dancing Script', cursive;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial;
+    background-color: white;
+}
+
+.Titulo_curiosidades {
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Arial;
+    background-color: #f7f5f5;
+}
+
+.Titulo_forum {
+    font-size: 1.4rem;
+
+}
+.adsense {
+    width: 100%;
+    top: 25%;
+    margin: 0;
+    left: 85%;
+    display: flex;
+    float: right;
+    height: 80%;
+    position: fixed;
+    background-color: white;
+}
+@media only screen and (max-width: 600px) {
+    .conteudo-curiosidade {
+        margin: auto;
+    }
+    .parent {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial;
+        background-color: white;
+    }
+    .adsense {
+        width: 100%;
+        text-align:center;
+        min-height:250px;
+        display: flex;
+        height: 80%;
+        position: static;
+        background-color: gray;
+    }
+    .Titulo_forum {
+        width:100%;
+        height:100%;
+        margin: 0px auto 0px auto;
+        background-color:white;
+    }
 }

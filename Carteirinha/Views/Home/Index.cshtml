@@ -1,39 +1,38 @@
-﻿<title>Gerenciamento de Carteirinha</title>
+﻿@{
+    Layout = $"/Views/Shared/{ViewBag.Tipo}.cshtml";
+}
+
+<title>Gerenciamento de Carteirinha</title>
 <link rel="stylesheet" href="~/css/home.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <!--CDN de fonte-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet">
-<div class="container">
-<h1 class="text-center">Bem vindo</h1>
-<div class="caixa">    
-    <div id="carousels" class="carousel slide carrosel_config" data-ride="carousel">
-        <ol class="carousel-indicators">
-                <li data-target="#carousels" data-slide-to="0" class="active"></li>
-                <li data-target="#carousels" data-slide-to="1"></li>
-                <li data-target="#carousels" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner bg-black">
-            <div class="carousel-item active">
-                    <img class="d-block img-carrousel" src="https://cdn.pixabay.com/photo/2016/11/19/11/11/dua-lipa-1838653_1280.jpg" alt="Primeiro Slide">
-            </div>
-            <div class="carousel-item">
-                    <img class="d-block img-carrousel" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
-            </div>
-            <div class="carousel-item">
-                    <img class="d-block img-carrousel" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
-            </div>
-        </div>
-            <a class="carousel-control-prev" href="#carousels" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-            <a class="carousel-control-next" href="#carousels" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
+<div class="container mb-3">
+<h1 class="text-center">Bem vindo ao Fã Clube do [Nome do Artista]</h1>
+    <div class="cabecalho">
+    <img class="caixa"/>
     </div>
+    <div class="Biografia">
+        <h1>Biografia</h1>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mauris risus, porttitor sit amet arcu sit amet, pulvinar commodo quam. Sed non eros sit amet augue tempor congue. Nunc at libero sapien. Aliquam commodo mattis purus quis luctus. Aliquam tempus orci libero, at tincidunt justo pellentesque eu. Donec sagittis scelerisque luctus. Duis sed aliquam odio. Quisque libero metus, convallis at magna ut, tincidunt molestie libero. Sed sollicitudin facilisis nunc id sodales. Phasellus suscipit lorem non erat molestie venenatis. Nunc fermentum, justo sed interdum aliquam, massa nulla vehicula odio, vitae egestas velit sem id eros. Aliquam erat volutpat. Sed tempus tempus odio, sed auctor lectus consectetur a. Morbi imperdiet sed lectus semper dapibus.
+
+        Mauris maximus orci quis vestibulum scelerisque. Aliquam erat volutpat. Praesent vulputate faucibus urna, bibendum ornare lectus eleifend in. Morbi ultrices, sapien quis feugiat condimentum, tortor libero ornare lectus, a interdum augue dolor faucibus lectus. Pellentesque ut mauris vulputate, condimentum quam in, fringilla arcu. Vivamus id molestie odio. Praesent porta, magna in vestibulum feugiat, lacus tortor efficitur dui, et porta dui nisl et erat. Quisque quis dui id ante ullamcorper blandit. Nam vel ultrices neque. Fusce fermentum a diam id fermentum. Pellentesque consectetur tristique accumsan. Integer rhoncus magna ut enim ultrices, eget commodo tellus tincidunt. Aliquam nisl mi, tincidunt ac ipsum nec, rhoncus mattis magna. Nullam pharetra vitae enim eget maximus. Mauris sed eleifend ante, ut luctus massa. Donec ac rhoncus est.
+
+        Maecenas sed sagittis lacus, quis euismod lacus. Aenean fermentum ut ipsum pharetra hendrerit. Nam dignissim interdum vulputate. Etiam volutpat augue in lacus egestas, facilisis dignissim felis eleifend. Morbi id semper mauris. Maecenas ac purus libero. Mauris erat augue, auctor id molestie vel, ullamcorper sit amet augue. Nulla malesuada sed tortor eu laoreet. Fusce pulvinar cursus vehicula. Sed et pretium nunc, nec volutpat dolor. Integer maximus vulputate turpis vitae interdum. Phasellus ac vulputate justo, bibendum maximus justo. Etiam imperdiet vitae lorem quis tincidunt. Duis id purus faucibus, commodo nulla luctus, semper turpis. Vivamus pellentesque lobortis dui ut dictum. Donec viverra, ipsum vitae pellentesque porta, lorem libero bibendum erat, in scelerisque arcu dui vel nunc.
+
+        Integer in pretium ante, et sollicitudin tellus. Integer vitae euismod arcu. Sed nunc nulla, commodo in ullamcorper a, suscipit id arcu. Suspendisse in risus nunc. Integer a accumsan neque, eu vulputate ex. Morbi non libero ut augue tristique tristique. Fusce tempor sollicitudin neque, at porttitor velit. Nam libero risus, pretium ac molestie ut, placerat eleifend erat. Donec eu tellus id quam ultrices bibendum vel sed massa. Etiam dapibus tellus tristique ante ullamcorper consequat.
+
+        Pellentesque semper orci nulla, et accumsan nulla laoreet ut. Suspendisse posuere, nibh a sollicitudin feugiat, metus augue scelerisque erat, id gravida diam ligula nec nisl. Morbi quis massa condimentum, ultrices orci eu, elementum massa. Quisque ullamcorper metus eu orci aliquam, sed tempus risus dictum. Quisque finibus ullamcorper enim nec pulvinar. Quisque hendrerit tempor tellus accumsan porta. Vestibulum consectetur molestie tellus, nec tincidunt massa consequat id. Praesent tempus quam at luctus mollis. Sed vestibulum maximus urna, id blandit lectus facilisis et. Maecenas lacinia mauris at massa maximus, vitae viverra magna interdum. Phasellus ex massa, pulvinar ultrices ipsum suscipit, dapibus sagittis sapien. Quisque sed lacus porttitor, volutpat mi non, convallis metus. Sed mauris odio, convallis sit amet sapien nec, auctor bibendum nisi.
+
+        Vestibulum tincidunt volutpat est ac volutpat. Nullam quam risus, interdum ac justo eu, vehicula aliquam augue. Aliquam elementum nulla et orci dapibus scelerisque. Mauris id mollis sem. Duis at volutpat erat, ut porttitor nulla. Nunc in orci sed mi dictum lobortis non vel felis. Etiam eleifend nisi eu quam suscipit lobortis. Duis euismod ac dui sed semper. Donec lobortis nulla non massa finibus fermentum. Aliquam varius, nibh suscipit rhoncus sodales, nulla urna dictum quam, porta pretium enim purus vitae quam.
+
+        Duis nec sollicitudin velit. Mauris feugiat tempor urna sed dignissim. Donec maximus quis lorem vitae semper. Ut vel magna porttitor, volutpat quam a, suscipit est. Quisque tellus tortor, sagittis quis ante vel, lacinia pharetra ligula. Nunc egestas volutpat nulla ac pretium. Sed eget nibh sem. Etiam nisi ex, gravida eu finibus sit amet, finibus ac purus.
+
+        Mauris ut ex dolor. Praesent porta enim nulla, a interdum erat rhoncus at. In hac habitasse platea dictumst. Proin magna nibh, dignissim in mauris ac, sagittis dictum ex. Aliquam elit dolor, scelerisque non quam sit amet, dignissim scelerisque odio. Praesent diam enim, pulvinar nec augue vel, elementum tempus tortor. Nulla facilisi. Donec id porta dui. Sed vestibulum dolor eros, non imperdiet eros consectetur quis. Fusce ut orci consectetur, viverra massa sit amet, lacinia lacus. Phasellus elementum ipsum eu est elementum gravida. Cras convallis imperdiet urna, vitae feugiat justo molestie sit amet. Nunc non quam libero. Nulla facilisi. Aenean facilisis elit id fermentum ultricies. Phasellus eget mauris luctus, volutpat ligula sed, condimentum ligula.
+        </p>
     </div>
 
 </div>

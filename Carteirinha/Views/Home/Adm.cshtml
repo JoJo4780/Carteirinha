@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Usuario>
+@{
+    Layout = $"/Views/Shared/_Layout_Adm.cshtml";
+}
+
+
+
+<div class="tabela">
+    <table id="" class="table table-bordered tabela-adm">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome de Usuraio</th>
+            <th scope="col">Apelido de Usuario</th>
+            <th scope="col">Status atual da Carteirinha</th>
+            <th scope="col">Operações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Usuario user in Model){
+        <tr>
+            @{if(user.Username.ToUpper() != "ADM"){
+                    <th scope="row">@user.Id</th>
+                    <td>@user.Nome</td>
+                    <td>@user.Username</td>
+                    <td>@user.Status</td>
+                    if(user.Status.ToLower() == "solicitado"){
+                                <td>
+                                    <a class="btn function btn-secondary">Aguardando produção</a>
+                                <a asp-controller="Home" asp-action="CancelarEnvio" name="id" value="@user.Id" asp-route-id="@user.Id" type="submit" class="function btn btn-secondary">Cancelar solicitação</a>
+                                </td>
+
+                            }else if(user.Status.ToLower() == "produzido"){
+                                <td >
+                                    <a asp-controller="Home" asp-action="Enviar" name="id" value="@user.Id" asp-route-id="@user.Id" type="submit" class="function btn btn-secondary">Enviar</a>
+                                    <a asp-controller="Home" asp-action="CancelarEnvio" name="id" value="@user.Id" asp-route-id="@user.Id" type="submit" class="function btn btn-secondary">Cancelar solicitação</a>
+                                </td>
+                            }
+                            else if (user.Status.ToLower() == "enviado")
+                            {
+                                <td><a asp-controller="Home" asp-action="CancelarEnvio" name="id" value="@user.Id" asp-route-id="@user.Id" type="submit" class="function btn btn-secondary">Cancelar Envio</a></td>
+
+                            }else if(user.Status.ToLower() == "não solicitado")
+                            {
+                                <td><a asp-controller="Home" asp-action="CancelarEnvio" name="id" value="@user.Id" asp-route-id="@user.Id" type="submit" class="function btn btn-secondary">Solicitar</a></td>
+
+                            }
+
+                        }
+                }
+        </tr>
+        }
+    </tbody>
+</table>
+</div>
+

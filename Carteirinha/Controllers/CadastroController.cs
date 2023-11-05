@@ -17,16 +17,27 @@ namespace Carteirinha.Controllers
         }
         public IActionResult Cadastrar()
         {
+            string sessionId = HttpContext.Session.Id;
             IEnumerable<Usuario> User = _context.Usuario;
-            ViewBag.Login = "Deslogado";
-            foreach (Usuario usuarios in User)
+            ViewBag.Tipo = "_Layout";
+            bool logado = false;
+            foreach (Usuario user_login in User)
             {
-                if (usuarios.Login == 1)
+                if (user_login.Login == sessionId)
                 {
-                    ViewBag.Login = "Logado";
-                    ViewBag.usuario = usuarios.Nome;
+                    logado = true;
+                    ViewBag.Username = user_login.Username;
+                    if (user_login.Username == "ADM")
+                    {
+                        if (user_login.Nome == "ADM")
+                        {
+                            ViewBag.Tipo = "_Layout_Adm";
+                        }
+                    }
                 }
+
             }
+            ViewBag.login = logado;
             return View();
         }
         [HttpPost]
@@ -34,15 +45,6 @@ namespace Carteirinha.Controllers
         {
             IEnumerable<Usuario> usuarios = _context.Usuario;
             int invalidar = 0;
-            ViewBag.Login = "Deslogado";
-            foreach (Usuario verificar in usuarios)
-            {
-                if (verificar.Login == 1)
-                {
-                    ViewBag.Login = "Logado";
-                    ViewBag.usuario = verificar.Nome;
-                }
-            }
 
             foreach (Usuario usuario_existente in usuarios)
             {
