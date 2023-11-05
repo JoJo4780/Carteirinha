@@ -24,3 +24,26 @@
         margin: 0% 10%;
         overflow-y: scroll;
     }
+.imagem_card{
+    background-color:gray;
+    height:100%;
+    width:100%;
+    min-height:200px
+}
+.obras{
+    text-align:center;
+}
+.titulo_obra{
+    margin:auto;
+}
+@media only screen and (max-width: 600px) {
+    .conteudo {
+        height: 100vh;
+        overflow: scroll;
+    }
+    .row {
+        justify-content: center;
+        overflow-y: scroll;
+        height: 100%;
+    }
+}

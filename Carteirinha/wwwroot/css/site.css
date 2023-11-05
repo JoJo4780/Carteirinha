@@ -28,9 +28,7 @@ body {
         height: 130%;
         overflow: scroll;
     }
-    body {
-        width: fit-content;
-    }
+
 }
 .function{
 margin: 0.2rem;
