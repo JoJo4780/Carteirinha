@@ -53,7 +53,7 @@ h2 {
 .carteirinha {
     height: 75%;
     width: 80%;
-    max-width: 650px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
