@@ -16,12 +16,14 @@
         <div  class="carteirinha_form" id="formulario_main">
             <div class="box_image">
                 <label id="icon" for="User_image">
-                    <i class="bi bi-arrow-up-circle image"></i>
+                    <i class="bi bi-arrow-up-circle image" id="Icone"></i>
                 </label>
-                <img id="preview_Image" >
-                <input type="file"  class="Image_file image" id="User_image"  hidden>
+                    <label id="preview" for="User_image">
+                        <img id="preview_Image">
+                    </label>
+                <input type="file" class="Image_file image" id="User_image"  hidden>
                     <input asp-for="URL_Image" type="text" name="URL_Image" value="1" id="Url_image" hidden>
-                <p class="mensagem_image image">Adicione uma foto</p>
+                    <p class="mensagem_image image" id="mensagem_image">Adicione uma foto</p>
             </div>                
             <div class="nome formularios">
                     <div class="forms">
@@ -52,15 +54,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Necessita estar logado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <p>Precisa estar logado para solicitar a carteirinha,caso não tenha conta clique em registrar para poder cria-la</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <a class="btn btn-secondary text-dark" asp-controller="Cadastro" asp-action="Cadastrar">Registrar</a>
+                    <a class="btn btn-primary text-dark" asp-controller="Home" asp-action="Login">Login</a>
                 </div>
             </div>
         </div>

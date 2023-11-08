@@ -5,8 +5,14 @@
     height: fit-content;
 }
 .caixa {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
     margin: auto;
     background-color: gray;
+    font-size: 4rem;
+    font-weight:bold;
     height: 30vw;
     width: 40vw;
 }
